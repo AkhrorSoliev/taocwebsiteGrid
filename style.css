@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    45deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffe770 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 50px;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  list-style: none;
+  background-color: #ffc600;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+
+.menu-list li:hover {
+  -webkit-box-shadow: 1px 15px 28px 5px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 1px 15px 28px 5px rgba(0, 0, 0, 0.31);
+  box-shadow: 1px 15px 28px 5px rgba(0, 0, 0, 0.31);
+}
+
+/* class="top" style */
+
+.top {
+  display: grid;
+  grid-template-areas:
+    'hero hero add1'
+    'hero hero add2';
+  gap: 20px;
+}
+
+.hero {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%),
+    url('https://source.unsplash.com/1200x600/?food');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px;
+}
+
+.hero p,
+h1 {
+  background-color: #ffc600;
+  padding: 10px;
+}
+
+.ads {
+  background-color: #ffc600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ads p {
+  font-size: 20px;
+}
+
+.price {
+  font-size: 3.5rem !important;
+}
+
+.ads1 {
+  grid-area: ads1;
+}
+
+.ads2 {
+  grid-area: ads2;
+}
+
+.features {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature span {
+  font-size: 3rem;
+}
+
+.feature p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.p-text {
+  font-weight: normal !important;
+  line-height: 1.2;
+}
+
+.feature {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* About qism stillari */
+
+.about {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 50px;
+}
+
+.about img {
+  max-width: 100%;
+}
+
+@media (max-width: 680px) {
+  .menu-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .top {
+    grid-template-areas:
+      'hero hero '
+      'add1 add2 ';
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .top {
+    grid-template-areas:
+      'hero '
+      'add1'
+      'add2 ';
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
