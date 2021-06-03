@@ -146,14 +146,36 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
+  .hero {
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
   .top {
     grid-template-areas:
       'hero hero '
       'add1 add2 ';
   }
+
+  .ads {
+    border-radius: 15px;
+  }
 }
 
 @media (max-width: 600px) {
+  body {
+    margin: 20px;
+  }
+
   .menu-list {
     grid-template-columns: 1fr;
   }
